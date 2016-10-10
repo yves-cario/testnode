@@ -14,6 +14,22 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent }     from './heroes.component';
 import { HeroService }         from './hero.service';
 import { DashboardComponent }  from './dashboard.component';
+import { HeroSearchComponent } from './hero-search.component';
+
+// Observable class extensions
+import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/throw';
+
+// Observable operators
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+
+
 
 @NgModule({
   imports:      
@@ -26,7 +42,8 @@ import { DashboardComponent }  from './dashboard.component';
   AppComponent,
   DashboardComponent,
   HeroDetailComponent,
-  HeroesComponent],
+  HeroesComponent,
+  HeroSearchComponent],
   bootstrap:    [ AppComponent ],
   providers: [HeroService]
 })
